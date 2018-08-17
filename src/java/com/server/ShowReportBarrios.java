@@ -22,11 +22,9 @@ public class ShowReportBarrios extends HttpServlet {
         response.setContentType("application/pdf");
         ServletOutputStream servletOutputStream;
         String xml;        
-        String nroVenta;
-        Long idVenta;
+        
+        
         Reportes reporte = new Reportes();
-        nroVenta=request.getParameter("nroVenta");
-        idVenta=Long.valueOf(nroVenta);
                com.melani.ejb.BarriosWs port = service.getBarriosWsPort();             
                 xml = port.searchAllBarrios();                
                 servletOutputStream = response.getOutputStream();

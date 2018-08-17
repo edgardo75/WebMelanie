@@ -27,7 +27,7 @@ public class ShowReportEntreFechasCompra extends HttpServlet {
         Reportes reporte = new Reportes();
         fecha1=request.getParameter("fstart");
                 fecha2=request.getParameter("fend");  
-                System.out.println(" "+fecha1+fecha2);
+                
                 com.melani.ejb.NotaPedidoWs port = service.getNotaPedidoWsPort();
                 result = port.selectNotaEntreFechasCompra(fecha1, fecha2);
                 servletOutputStream = response.getOutputStream();
